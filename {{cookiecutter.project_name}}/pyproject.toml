@@ -6,9 +6,11 @@ authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
 repository = "https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}"
 documentation = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
 readme = "README.md"
-packages = [
-  {include = "{{cookiecutter.project_slug}}"}
-]
+{% if cookiecutter.src_layout == 'y' -%}
+packages = [{include = "{{cookiecutter.project_slug}}", from = "src"}]
+{% else %}
+packages = [{include = "{{cookiecutter.project_slug}}"}]
+{% endif %}
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
