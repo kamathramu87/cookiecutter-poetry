@@ -35,6 +35,10 @@ from <project_slug> import foo
 
 A short description of your project.
 
+**src_layout**
+`"y"` or `"n"`. Adds [src_layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) structure to the project
+
+
 **include_github_actions**
 
 `"y"` or `"n"`. Adds a `.github` directory with various actions and
